@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Prediction</title>
+</head>
+<body>
+  <h2>Select a House ID to Predict Price</h2>
+  <form action="/predict" method="post">
+    <label for="house_id">House ID:</label>
+    <select name="house_id" id="house_id">
+      {% for row in houses.itertuples() %}
+        <option value="{{ row.Id }}">{{ row.Id }}</option>
+      {% endfor %}
+    </select>
+    <br><br>
+    <button type="submit">Predict Price</button>
+  </form>
+</body>
+</html>
