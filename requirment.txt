@@ -1,0 +1,21 @@
+# requirements.txt
+
+# Core packages
+pandas
+numpy
+scikit-learn
+
+# Model evaluation
+xgboost
+
+# Web app
+flask
+
+# Logging
+loguru
+
+# Optional (if using HTML templates or styling)
+jinja2
+
+# Ensure compatibility
+joblib
