@@ -34,7 +34,7 @@ project-root/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/house-price-predictor.git
+git clone https://github.com/Manishkanwa/house-price-predictor.git
 cd house-price-predictor
 ```
 
