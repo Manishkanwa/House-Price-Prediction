@@ -10,10 +10,6 @@ app = Flask(__name__)
 TEST_DATA_PATH = os.path.join("data", "test_data.csv")
 SELECTOR_PATH = os.path.join("models", "feature_selector.pkl")
 
-# Define these based on training
-NUMERIC_FEATURES = ['LotArea', 'GrLivArea', 'TotalBsmtSF']  # example
-CATEGORICAL_FEATURES = ['Neighborhood', 'HouseStyle', 'Exterior1st']  # example
-
 # Load test data (must exist)
 test_df = pd.read_csv(TEST_DATA_PATH)
 
@@ -32,8 +28,6 @@ def predict():
     pred_price = predict_price(
         house_df=selected,
         all_features_df=test_df,
-        numeric_features=NUMERIC_FEATURES,
-        categorical_features=CATEGORICAL_FEATURES,
         selector_path=SELECTOR_PATH
     )
 
